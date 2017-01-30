@@ -2,7 +2,7 @@
   "name": "gulp-setup",
   "version": "1.0.0",
   "description": "A gulp setup",
-  "main": "index.js",
+  "main": "gulpfile.babel.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,8 +12,29 @@
   ],
   "author": "Nigel Hoegee",
   "bugs": {
-    "url": "https://github.com/nhoegee/grunt-setup/issues"
+    "url": "https://github.com/nhoegee/gulp-setup/issues"
   },
-  "homepage": "https://github.com/nhoegee/grunt-setup#readme",
-  "license": "ISC"
+  "homepage": "https://github.com/nhoegee/gulp-setup#readme",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-preset-es2015": "^6.22.0",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-if": "^2.0.2",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-util": "^3.0.8",
+    "postcss-browser-reporter": "^0.5.0",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-import": "^9.1.0",
+    "postcss-reporter": "^3.0.0",
+    "postcss-url": "^5.1.2",
+    "require-dir": "^0.3.1",
+    "run-sequence": "^1.2.2"
+  }
 }

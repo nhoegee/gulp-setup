@@ -54,3 +54,11 @@ bower_components
 .bower-cache
 .bower-registry
 .bower-tmp
+
+
+
+### Own .gitignores ###
+# public file
+public/*
+!public/favicon.ico
+!public/index.html
