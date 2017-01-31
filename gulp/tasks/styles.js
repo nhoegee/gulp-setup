@@ -14,6 +14,7 @@ import browserReporter from 'postcss-browser-reporter'
 import reporter from 'postcss-reporter'
 
 import { errorHandler, getConfigKeys } from '../config'
+
 const taskOptions  = getConfigKeys();
 
 const localConfig = {
@@ -25,7 +26,7 @@ const localConfig = {
     cssnano: {
       autoprefixer: false
     }
-  }
+  },
   styles: {
     src: ['./resources/assets/styles/*.css'],
     rename: 'style.min.css',
@@ -35,7 +36,7 @@ const localConfig = {
 
 gulp.task('clean:styles', () =>
   gulp.src(localConfig.clean.src, { read: localConfig.clean.read })
-    .pipe(plumber(errorHandler))
+    .pipe(plumber({ errorHandler }))
     .pipe(clean())
 )
 
@@ -45,10 +46,10 @@ gulp.task('styles', ['clean:styles'], () => {
     : [atImport, url, cssnext, browserReporter, reporter]
 
   return gulp.src(localConfig.styles.src)
-    .pipe(plumber(errorHandler))
+    .pipe(plumber({ errorHandler }))
     .pipe(gulpif(taskOptions.sourcemaps ,sourcemaps.init()))
       .pipe(postcss(plugins))
       .pipe(gulpif(taskOptions.minify, rename(localConfig.styles.rename)))
     .pipe(gulpif(taskOptions.sourcemaps, sourcemaps.write('.')))
-    .pipe(gulp.dest(localConfig. styles.dest));
+    .pipe(gulp.dest(localConfig.styles.dest))
 })

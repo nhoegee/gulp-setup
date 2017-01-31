@@ -7,8 +7,8 @@ export function errorHandler (error) {
   notify.onError({
     title: 'Gulp error',
     message: error.message
-  });
-  console.error(error.message);
+  })(error);
+  // console.error(error.message);
   this.emit('end');
 }
 
@@ -26,6 +26,5 @@ function readKeys (filename) {
 export function getConfigKeys () {
   const keys = readKeys(`../config/${env}`);
   keys.environment = env;
-  console.log(keys);
   return keys;
 }

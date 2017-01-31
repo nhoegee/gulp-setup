@@ -11,3 +11,5 @@ gulp.task('views', () =>
   gulp.src(localConfig.src)
     .pipe(plumber({ errorHandler }))
 )
+
+// TODO: Add a html linter!

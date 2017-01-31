@@ -25,13 +25,6 @@ module.exports = {
   sourcemaps: false,
 
   /**
-   * revisioning
-   * Static asset revisioning by appending content hash to filenames
-   * **Warning**: Must be false if concat is set to false.
-   */
-  revisioning: false,
-
-  /**
    * watch
    * Watch source files and recompile on any change
    */
