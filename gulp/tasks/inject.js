@@ -15,6 +15,6 @@ const localConfig = {
 gulp.task('inject', () => {
   return gulp.src(localConfig.src)
     .pipe(plumber({ errorHandler }))
-    .pipe(inject(gulp.src(localConfig.target)))
+    .pipe(inject(gulp.src(localConfig.target), { ignorePath: '/public/' }))
     .pipe(gulp.dest(localConfig.dest))
 })
