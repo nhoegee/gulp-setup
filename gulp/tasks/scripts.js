@@ -27,7 +27,6 @@ const localConfig = {
 
 gulp.task('clean:scripts', () =>
   gulp.src(localConfig.clean.src)
-    .pipe(plumber({ errorHandler }))
     .pipe(clean())
 )
 

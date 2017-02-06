@@ -36,7 +36,6 @@ const localConfig = {
 
 gulp.task('clean:styles', () =>
   gulp.src(localConfig.clean.src, { read: localConfig.clean.read })
-    .pipe(plumber({ errorHandler }))
     .pipe(clean())
 )
 

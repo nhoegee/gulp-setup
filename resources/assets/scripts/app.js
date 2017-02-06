@@ -9,3 +9,9 @@ class ClassName {
 
   }
 }
+
+class sds {
+  constructor() {
+    let test = false;
+  }
+}
