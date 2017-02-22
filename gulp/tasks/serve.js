@@ -8,7 +8,7 @@ const taskOptions = getConfigKeys();
 
 const localConfig = {
   buildSrc: './public/',
-  appFiles: './public/**/*.*',
+  appFiles: ['./public/**/*.*', './resources/views/**/*.html'],
   defaultPort: 3000
 };
 
