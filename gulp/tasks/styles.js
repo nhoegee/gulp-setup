@@ -18,10 +18,6 @@ import { errorHandler, getConfigKeys } from '../config'
 const taskOptions  = getConfigKeys();
 
 const localConfig = {
-  clean: {
-    src: ['./public/css/*'],
-    read: false
-  },
   plugins: {
     cssnano: {
       autoprefixer: false
@@ -33,11 +29,6 @@ const localConfig = {
     dest: './public/css/'
   }
 }
-
-gulp.task('clean:styles', () =>
-  gulp.src(localConfig.clean.src, { read: localConfig.clean.read })
-    .pipe(clean())
-)
 
 gulp.task('styles', ['clean:styles'], () => {
   const plugins = taskOptions.minify
